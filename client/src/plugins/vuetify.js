@@ -10,6 +10,6 @@ export default new Vuetify({
   theme: {
     primary: 'rgb(25,25,112)',
     secondary: 'rgb(49,129,185)',
-    accent: 'rbg(48,182,227)',
+    accent: 'rgb(48,182,227)',
   },
 });
