@@ -1,8 +1,10 @@
 <template>
-  <div id="app">
-    <!-- Banner/Header -->
-    <Navbar />
-  </div>
+  <v-app>
+    <div id="app">
+      <!-- Banner/Header -->
+      <Navbar />
+    </div>
+  </v-app>
 </template>
 
 <script>
