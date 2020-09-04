@@ -8,17 +8,8 @@ export default new Vuetify({
     iconfont: 'fa',
   },
   theme: {
-    themes: {
-      light: {
-        primary: 'rgb(79,65,159)',
-        secondary: 'rgb(107,176,236)',
-        accent: 'rbg(114,232,255)',
-      },
-      dark: {
-        primary: 'rgb(0,0,68)',
-        secondary: 'rgb(0,85,137)',
-        accent: 'rgb(0,134,177)',
-      }
-    },
+    primary: 'rgb(25,25,112)',
+    secondary: 'rgb(49,129,185)',
+    accent: 'rbg(48,182,227)',
   },
 });

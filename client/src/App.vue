@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <div id="app">
+    <div id="app" class="">
       <!-- Banner/Header -->
       <Navbar />
     </div>
