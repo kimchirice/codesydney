@@ -220,7 +220,7 @@ select {
   text-transform: none;
 }
 
-nput,
+input,
 button,
 select,
 optgroup,

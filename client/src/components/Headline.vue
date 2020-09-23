@@ -1,26 +1,36 @@
 <template>
-  <div class="headline">
-    <div class="headline__randomMember">
-      <div class="headline__randomMember-title">
-        <div v-show="randomMember">
-          Meet {{ randomMember.name }}, {{ randomMember.headline }}
+  <v-container>
+    <v-skeleton-loader
+      :loading="loading"
+      height="50vh"
+      max-width="350px"
+      type="card-heading, image, action"
+      class="mx-auto"
+    ></v-skeleton-loader>
+    
+    <div class="headline">
+      <div class="headline__randomMember">
+        <div class="headline__randomMember-title">
+          <div v-show="randomMember">
+            Meet {{ randomMember.name }}, {{ randomMember.headline }}
+          </div>
+        </div>
+        <div>
+          <img
+            :src="getMembersUrl(randomMember.photo)"
+            :alt="randomMember.name"
+            :title="randomMember.name"
+            class="headline__randomMember-portrait"
+          />
         </div>
       </div>
       <div>
-        <img
-          :src="getMembersUrl(randomMember.photo)"
-          :alt="randomMember.name"
-          :title="randomMember.name"
-          class="headline__randomMember-portrait"
-        />
+        <router-link :to="{ name: 'contact' }" class="headline-link">
+          <button>Book a meeting with me</button>
+        </router-link>
       </div>
     </div>
-    <div>
-      <router-link :to="{ name: 'contact' }" class="headline-link">
-        <button>Book a meeting with me</button>
-      </router-link>
-    </div>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -29,6 +39,7 @@ export default {
   data() {
     return {
       members: [],
+      loading: true,
     };
   },
   created() {
